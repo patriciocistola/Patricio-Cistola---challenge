@@ -17,11 +17,10 @@ import java.util.Comparator;
 import java.util.IntSummaryStatistics;
 
 public class CantSociosPorEquipos {
+    // 5. Un listado, ordenado de mayor a menor según la cantidad de
+    // socios, que enumere, junto con cada equipo, el promedio de edad
+    // de sus socios, la menor edad registrada y la mayor edad registrada.
     public static void main(String[] args) {
-        // Un listado, ordenado de mayor a menor según la cantidad de socios, que
-        // enumere,
-        // junto con cada equipo, el promedio de edad de sus socios,
-        // la menor edad registrada y la mayor edad registrada.
         try {
             List<List<String>> data = new ArrayList<>();
             String filePath = "src/main/java/superliga/model/socios.csv";
@@ -58,8 +57,9 @@ public class CantSociosPorEquipos {
                 System.out.println("************************************************************");
                 System.out.println("La cantidad de socios de " + e + " es : " + cant);
                 IntSummaryStatistics eprom = edadeList.stream().mapToInt((a) -> a).summaryStatistics();
+                double eprom2d = Math.round(eprom.getAverage() *100.0)/100.0;
                 System.out.println("Promedio de edad de socios de " + e +
-                        " -----> " + eprom.getAverage());
+                        " -----> " + eprom2d);
                 System.out.println("Edad maxima de socios de " + e +
                         " -----> " + Collections.max(edadeList));
                 System.out.println("Edad minima de socios de " + e +

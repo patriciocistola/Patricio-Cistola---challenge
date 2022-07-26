@@ -3,6 +3,7 @@ import java.io.File;
 import java.util.Scanner;
 
 public class CantidadSocios {
+    //1. Cantidad total de personas registradas. 
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(new File("src/main/java/superliga/model/socios.csv"));
         sc.useDelimiter(";");

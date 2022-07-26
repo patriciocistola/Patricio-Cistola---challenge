@@ -10,10 +10,9 @@ import java.util.Arrays;
 import java.util.Collections;
 
 public class CasadosUniversitarios {
-    // Un listado con las 100 primeras personas casadas, con estudios
-    // Universitarios,
-    // ordenadas de menor a mayor según su edad. Por cada persona, mostrar: nombre,
-    // edad y equipo.
+    //3. Un listado con las 100 primeras personas casadas, con estudios
+    //Universitarios, ordenadas de menor a mayor según su edad. Por
+    //cada persona, mostrar: nombre, edad y equipo.
     public static void main(String[] args) {
         try {
             List<List<String>> data = new ArrayList<>();

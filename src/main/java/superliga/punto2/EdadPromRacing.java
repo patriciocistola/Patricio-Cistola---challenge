@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.IntSummaryStatistics;
 
 public class EdadPromRacing {
+    //2. El promedio de edad de los socios de Racing. 
     public static void main(String[] args) {
         try {
             List<List<String>> data = new ArrayList<>();
@@ -24,7 +25,8 @@ public class EdadPromRacing {
                 }
             }
             IntSummaryStatistics eprom = edades.stream().mapToInt((a) -> a).summaryStatistics();
-            System.out.println("El promedio de edad de los socios de Racing es  -----> " + eprom.getAverage());
+            double eprom2d = Math.round(eprom.getAverage() *100.0)/100.0;
+            System.out.println("El promedio de edad de los socios de Racing es  -----> " + eprom2d);
             s.close();
         } catch (Exception e) {
             System.out.print(e);
