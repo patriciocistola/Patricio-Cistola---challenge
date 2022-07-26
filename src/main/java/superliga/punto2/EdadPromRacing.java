@@ -25,6 +25,7 @@ public class EdadPromRacing {
             }
             IntSummaryStatistics eprom = edades.stream().mapToInt((a) -> a).summaryStatistics();
             System.out.println("El promedio de edad de los socios de Racing es  -----> " + eprom.getAverage());
+            s.close();
         } catch (Exception e) {
             System.out.print(e);
         }
